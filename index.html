@@ -22,12 +22,14 @@
             flex-direction: column;
             background-color: #F8ECD1;
             font-family: 'Cedarville Cursive', cursive;
+            text-align: center;
         }
 
         iframe {
             margin: 20px;
             padding: 20px;
             background-color: #DEB6AB;
+            width: 20%;
         }
 
         h1 {
@@ -37,17 +39,25 @@
 
         .songs {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
 
         img {
             height: 200px;
             border-bottom: 3px solid#AC7D88;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 620px) {
+            iframe {
+                width: 70%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>This is how a web developer shares songs with her loml</h1>
     <div class="songs">
         <iframe id="1" style="border-radius:12px"
             src="https://open.spotify.com/embed/track/6l0SEG60EHOxny0ZA4lxmO?utm_source=generator" width="40%"
@@ -63,6 +73,7 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
     </div>
+    <h1>This is how a web developer shares songs with her loml</h1>
     <img src="bear.png" alt="">
 </body>
 
